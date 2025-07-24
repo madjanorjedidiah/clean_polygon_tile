@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html>
 <head>
   <meta charset="utf-8" />
-  <title>XYZ Tile Viewer</title>
+  <title>Ghana Tile Viewer</title>
   <style> #map { height: 100vh; margin: 0; } </style>
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
@@ -11,7 +10,13 @@
   <div id="map"></div>
   <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   <script>
-    const map = L.map('map').setView([0, 0], 2);
+    const ghanaBounds = L.latLngBounds([4.5, -3.5], [11.5, 1.5]);
+
+    const map = L.map('map', {
+      maxBounds: ghanaBounds,
+      maxBoundsViscosity: 1.0
+    }).setView([7.9465, -1.0232], 7);
+
     L.tileLayer('tile/{z}/{x}/{y}.png', {
       attribution: '© Your Tiles',
       maxZoom: 18,
