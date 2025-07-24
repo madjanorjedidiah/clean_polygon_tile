@@ -1,0 +1,10 @@
+{
+    "format": "png",
+    "name": "mbtiles",
+    "description": "mbtiles",
+    "version": "1.1",
+    "type": "overlay",
+    "minzoom": "12",
+    "maxzoom": "12",
+    "bounds": "-3.58136,4.85034,0.0902784,7.87357"
+}
